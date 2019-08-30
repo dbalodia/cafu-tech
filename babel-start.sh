@@ -5,10 +5,10 @@ npm version patch
 
 VERSION=$(node -p -e "require('./package.json').version")
 
-git push git@github.com:dbalodia/cafu-tech.git HEAD:develop
+git push git@github.com:dbalodia/cafu-tech.git HEAD:master
 
 
-export APPNAME=lead-management-service
+export APPNAME=cafu-tech
 
 export VERSIONEDAPPNAME=$APPNAME:$VERSION
 
