@@ -38,20 +38,14 @@ sudo cp -r node_modules/ dist/node_modules
 
 cd dist/
 
+echo "image building"
 sudo docker build -t $APPNAME .
-
-sudo docker tag $APPNAME $REGISTRY_PATH/$APPNAME
-sudo docker tag $APPNAME $REGISTRY_PATH/$VERSIONEDAPPNAME
 
 echo "app name is"
 echo $APPNAME
 
-echo "Registry path is"
-echo $REGISTRY_PATH
-
-sudo docker push $REGISTRY_PATH/$APPNAME
-sudo docker push $REGISTRY_PATH/$VERSIONEDAPPNAME
-
+echo "running docker container"
+docker run -it --rm --name my-cafu-tech-app $APPNAME
 
 
 

@@ -1,7 +1,7 @@
-FROM mhart/alpine-node:8
-RUN mkdir -p /lead-management-service
-WORKDIR /lead-management-service
-ADD . /lead-management-service
-ENV PORT 3034
+FROM node:10
+RUN mkdir -p /cafu-tech
+WORKDIR /cafu-tech
+ADD . /cafu-tech
+ENV PORT 3012
+EXPOSE 3012
 CMD [ "mkdir /var/log/applogs", "CMD chmod +777 /var/log/applogs",  "npm run start"]
-EXPOSE 3034
