@@ -46,7 +46,7 @@ echo $APPNAME
 
 echo "running docker container"
 #docker run -it --rm --name my-cafu-tech-app $APPNAME
-sudo docker run -d -p 3012:3012 -v /home/ubuntu/app/services-configurations/application.yaml:/etc/properties/app/application.yaml -v /home/ubuntu/app/services-configurations/cafu-service.yaml:/etc/properties/service/plant-service.yaml -v /var/logs/application:/var/log/applogs -e GLOBAL_APP_SETTING_PATH=/etc/properties/app/application.yaml -e SERVICE_APP_SETTING_PATH=/etc/properties/service/cafu-service.yaml -e LOG_FILE_SETTING_PATH=/var/log/applogs/application.logs --restart always --name my-cafu-tech-app $APPNAME
+sudo docker run -d -p 3012:3012 -v /home/ubuntu/app/services-configurations/application.yaml:/etc/properties/app/application.yaml -v /home/ubuntu/app/services-configurations/cafu-service.yaml:/etc/properties/service/cafu-service.yaml -v /var/logs/application:/var/log/applogs -e GLOBAL_APP_SETTING_PATH=/etc/properties/app/application.yaml -e SERVICE_APP_SETTING_PATH=/etc/properties/service/cafu-service.yaml -e LOG_FILE_SETTING_PATH=/var/log/applogs/application.logs --restart always --name my-cafu-tech-app $APPNAME
 
 
 
