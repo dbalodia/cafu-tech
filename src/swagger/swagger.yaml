@@ -40,7 +40,7 @@ paths:
         - in: body
           name: data
           schema:
-            $ref: '#/definitions/Request'
+            $ref: '#/definitions/UserLoginRequest'
           required: true
           description: Request Body for user login
       responses:
@@ -49,7 +49,7 @@ paths:
         # responses may fall through to errors
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/Response"
+            $ref: "#/definitions/UserLoginResponse"
         default:
           description: Error
 
@@ -67,7 +67,7 @@ paths:
         - in: body
           name: data
           schema:
-            $ref: '#/definitions/Request'
+            $ref: '#/definitions/UserCreationRequest'
           required: true
           description: Request Body for Creating User
       responses:
@@ -76,7 +76,7 @@ paths:
         # responses may fall through to errors
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/Response"
+            $ref: "#/definitions/UserCreationResponse"
         default:
           description: Error
         
@@ -98,7 +98,7 @@ paths:
         - in: body
           name: data
           schema:
-            $ref: '#/definitions/Request'
+            $ref: '#/definitions/MessageCreationRequest'
           required: true
           description: Request Body for saving message
       responses:
@@ -107,7 +107,7 @@ paths:
         # responses may fall through to errors
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/Response"
+            $ref: "#/definitions/MessageCreationResponse"
         default:
           description: Error
 
@@ -125,7 +125,7 @@ paths:
         - in: body
           name: data
           schema:
-            $ref: '#/definitions/Request'
+            $ref: '#/definitions/MessageSearchRequest'
           required: true
           description: Request Body for Searchin Message
       responses:
@@ -134,7 +134,7 @@ paths:
         # responses may fall through to errors
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/Response"
+            $ref: "#/definitions/MessageSearchResponse"
         default:
           description: Error
 
@@ -150,8 +150,144 @@ parameters:
     type: string
     required: true
 
-definitions:
-  Request:
-    type: object
-  Response:
-    type: object
+definitions:  
+  UserLoginRequest:
+    properties: 
+      email: 
+        type: "string"
+        example: "pilot@cafu.com"
+      password: 
+        type: "string"
+        example: "cafu123"
+
+  UserLoginResponse:
+    properties: 
+      data: 
+        properties: 
+          email: 
+            type: "string"
+            example: "pilot@cafu.com"
+          token: 
+            type: "string"
+            example: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZDY5MjVkNDhkMDk0ZjAwMTNiZWMyNzEiLCJlbWFpbCI6InBpbG90QGNhZnUuY29tIiwidXNlck5hbWUiOiJDYXRoeSBIYXJtYW4iLCJyb2xlSWQiOiI1YjFmNjFmNDZlNjVmMDAwMTEwMDQwNjgiLCJyb2xlTmFtZSI6IlBJTE9UIiwicGVybWlzc2lvbiI6eyJBVURJT19NRVNTQUdFIjpbIlJFQUQiLCJDUkVBVEUiXX0sImlhdCI6MTU2NzE3MjUzNCwiZXhwIjoxNTY4Mjk1NzM0fQ.tS7cKi7AhMDT8PLIkHRIJIt0xO2lDTSjox6KTwgAgP8ZPCkMu8wGRDA3fHKQkXOcb5ULUF6kkSliKjhagijJikI9TMDK6-37D2T62-mE1VhujAtt3Zxg-n8v9OXcGBucoH7WIM5gSwvIi1z6GMLKGgqw8ENTkOEl5AyB8QZBmXU"
+
+  UserCreationRequest:
+    properties: 
+      email: 
+        type: "string"
+        example: "customer@cafu.com"
+      password: 
+        type: "string"
+        example: "cafu123"
+      firstName: 
+        type: "string"
+        example: "Sherlock"
+      lastName: 
+        type: "string"
+        example: "Holmes"
+      roleId: 
+        type: "string"
+        example: "5b239aceffc4060012ca437f"
+
+  UserCreationResponse:
+    properties: 
+      data: 
+        properties: 
+          isEntityActive: 
+            type: "boolean"
+            example: true
+          createdOn: 
+            type: "string"
+            example: "2019-08-30T13:30:45.813Z"
+          modifiedOn: 
+            type: "string"
+            example: "2019-08-30T13:30:45.813Z"
+          _id: 
+            type: "string"
+            example: "5d69260d8d094f0013bec272"
+          entityData: 
+            properties: 
+              email: 
+                type: "string"
+                example: "customer@cafu.com"
+              firstName: 
+                type: "string"
+                example: "Sherlock"
+              lastName: 
+                type: "string"
+                example: "Holmes"
+              roleId: 
+                type: "string"
+                example: "5b239aceffc4060012ca437f"
+              password: 
+                type: "string"
+                example: "$2a$08$Z7vbh5DOl1OoZdhaG//qnu5fbwWvHY4KOVexcKx1sCVybiPb4zIea"
+          
+  MessageCreationRequest:
+    properties: 
+      message: 
+        type: "string"
+        example: "I'll be 40 minutes late due to truck breakdown"
+      
+  MessageCreationResponse:
+    properties: 
+      data: 
+        properties: 
+          isEntityActive: 
+            type: "boolean"
+            example: true
+          createdOn: 
+            type: "string"
+            example: "2019-08-30T13:42:35.523Z"
+          modifiedOn: 
+            type: "string"
+            example: "2019-08-30T13:42:35.523Z"
+          _id: 
+            type: "string"
+            example: "5d6927cb8d094f0013bec274"
+          entityData: 
+            properties: 
+              message: 
+                type: "string"
+                example: "I'll be 40 minutes late due to truck breakdown"
+            type: "object"
+          createdBy: 
+            properties: 
+              id: 
+                type: "string"
+                example: "5d6925d48d094f0013bec271"
+              name: 
+                type: "string"
+                example: "Cathy Harman"
+            type: "object"
+          assignedTo: 
+            properties: 
+              id: 
+                type: "string"
+                example: "5d6925d48d094f0013bec271"
+              name: 
+                type: "string"
+                example: "Cathy Harman"
+          
+  MessageSearchRequest:
+    properties: 
+      assignedTo: 
+        required: 
+          - "id"
+        properties: 
+          id: 
+            type: "string"
+            example: "Cathy Harman Pilot"
+        type: "object"
+  
+  MessageSearchResponse:
+    properties: 
+      data: 
+        properties: 
+          message: 
+            type: "string"
+            example: "I'll be 20 minutes late due to truck breakdown"
+          assignedTo: 
+            type: "string"
+            example: "Cathy Harman"
+        type: "object"
