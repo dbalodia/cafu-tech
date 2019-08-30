@@ -1,0 +1,37 @@
+{
+    "_id": {
+        "$oid": "5b1f61f46e65f00011004068"
+    },
+    "status": "Active",
+    "functions": [
+        {
+            "$oid": "5ac604021b31f10011ff75fa"
+        },
+        {
+            "$oid": "5ac604021b31f10011ff75f9"
+        }
+    ],
+    "createdOn": "2019-08-28T12:51:24.159Z",
+    "modifiedOn": "2019-08-28T12:51:24.159Z",
+    "name": "PILOT",
+    "organization": "CAFU",
+    "description": "Pilot User Can have different module access"
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5b239aceffc4060012ca437f"
+    },
+    "isEntityActive": true,
+    "functions": [
+        {
+            "$oid": "5ac604021b31f10011ff75fa"
+        }
+    ],
+    "createdOn": "2019-08-28T12:51:24.159Z",
+    "modifiedOn": "2019-08-28T12:51:24.159Z",
+    "name": "CUSTOMER",
+    "organization": "CAFU",
+    "description": "Customer User Role Can Have Different Module Access",
+    "__v": 0
+}

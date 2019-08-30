@@ -1,0 +1,5 @@
+dbConfigs: 
+    dbName: 'cafu'
+
+routes:
+    exemptedRoutes: ['/api/docs', '/version', '/iam/login']

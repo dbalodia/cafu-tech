@@ -1,0 +1,46 @@
+{
+    "_id": {
+        "$oid": "5ac604021b31f10011ff75f8"
+    },
+    "functionality": [
+        {
+            "_id": {
+                "$oid": "5ac604021b31f10011ff75fa"
+            },
+            "name": "READ",
+            "description": "it is read permission",
+            "isEntityActive": true
+        },
+        {
+            "_id": {
+                "$oid": "5ac604021b31f10011ff75f9"
+            },
+            "name": "CREATE",
+            "description": "it is write permission",
+            "isEntityActive": true
+        },
+        {
+            "_id": {
+                "$oid": "5c5a861a96c2bd0011c357ba"
+            },
+            "description": "update",
+            "name": "UPDATE",
+            "isEntityActive": true
+        },
+        {
+            "_id": {
+                "$oid": "5c5a862796c2bd0011c357bb"
+            },
+            "description": "Delete",
+            "name": "DELETE",
+            "isEntityActive": true
+        }
+    ],
+    "isEntityActive": true,
+    "createdOn": "2019-08-28T11:09:54.644Z",
+    "modifiedOn": "2019-08-28T11:09:54.644Z",
+    "name": "AUDIO_MESSAGE",
+    "description": "Module to manage Audio Message",
+    "__v": 0,
+    "displayText": "Audio Message"
+}

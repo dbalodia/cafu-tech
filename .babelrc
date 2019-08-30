@@ -1,0 +1,23 @@
+{
+    "presets": [
+        "es2017",
+        "stage-0"
+    ],
+    "plugins": [
+        "transform-es2015-arrow-functions",
+        "transform-es2015-modules-commonjs",
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "@modules/message-service": "./src/message-service",
+                    "@modules/iam-service": "./src/iam-service",
+                    "@modules/order-service": "./src/order-service",
+                    "root": "."
+                }
+            }
+        ]
+    ],
+    "sourceMaps": true,
+    "retainLines": true
+}

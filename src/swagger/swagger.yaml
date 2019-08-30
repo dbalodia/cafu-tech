@@ -1,0 +1,157 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Cafu Service APIs
+  description: API for Cafu Service
+# basePath prefixes all resource paths 
+basePath: /cafu-service
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+tags:
+- name: Iam
+  description: All Iam Endpoints
+- name: Message
+  description: All Message Endpoints
+
+paths:
+# ===================================================================
+# ========================= Iam =====================================
+# ===================================================================
+
+  /iam/login:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: index
+    post:
+      tags:
+        - Iam
+      description: User Login
+      # used as the method name of the controller
+      operationId: userLogin
+      parameters: 
+        - in: body
+          name: data
+          schema:
+            $ref: '#/definitions/Request'
+          required: true
+          description: Request Body for user login
+      responses:
+        "200":
+          description: Success
+        # responses may fall through to errors
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Response"
+        default:
+          description: Error
+
+  /iam/create/user:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: index
+    post:
+      tags:
+        - Iam
+      description: Create User
+      # used as the method name of the controller
+      operationId: userCreation
+      parameters: 
+        - $ref: '#/parameters/Authorization'
+        - in: body
+          name: data
+          schema:
+            $ref: '#/definitions/Request'
+          required: true
+          description: Request Body for Creating User
+      responses:
+        "200":
+          description: Success
+        # responses may fall through to errors
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Response"
+        default:
+          description: Error
+        
+# ===================================================================
+# ===================== Message =====================================
+# ===================================================================
+
+  /message/create:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: index
+    post:
+      tags:
+        - Message
+      description: Save Message From A Pilot With Accesss Checking
+      # used as the method name of the controller
+      operationId: saveMessage
+      parameters: 
+        - $ref: '#/parameters/Authorization'
+        - in: body
+          name: data
+          schema:
+            $ref: '#/definitions/Request'
+          required: true
+          description: Request Body for saving message
+      responses:
+        "200":
+          description: Success
+        # responses may fall through to errors
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Response"
+        default:
+          description: Error
+
+  /message/search:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: index
+    post:
+      tags:
+        - Message
+      description: Search Message
+      # used as the method name of the controller
+      operationId: searchMessage
+      parameters: 
+        - $ref: '#/parameters/Authorization'
+        - in: body
+          name: data
+          schema:
+            $ref: '#/definitions/Request'
+          required: true
+          description: Request Body for Searchin Message
+      responses:
+        "200":
+          description: Success
+        # responses may fall through to errors
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Response"
+        default:
+          description: Error
+
+      
+# =====================================================================
+# ================ Parameters & Definitions ===========================
+# =====================================================================
+
+parameters: 
+  Authorization:
+    in: header
+    name: Authorization
+    type: string
+    required: true
+
+definitions:
+  Request:
+    type: object
+  Response:
+    type: object

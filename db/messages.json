@@ -1,0 +1,174 @@
+{
+    "_id": {
+        "$oid": "5d6902b15869fb18ab09412f"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:04:16.998+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:04:16.998+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d6903b654f93c1ac58dca57"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:08:38.462+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:08:38.462+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d6903d2ff47d01c0930d0dd"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:09:06.157+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:09:06.157+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d6903f717a1cf1cd4c79300"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:09:43.695+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:09:43.695+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d6904899bce051d44ca84ae"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:12:09.277+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:12:09.277+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d6904ba6d671e1f3942ac48"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:12:58.558+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:12:58.558+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}
+// ----------------------------------------------
+{
+    "_id": {
+        "$oid": "5d69051b7acaa720e0d4f433"
+    },
+    "isEntityActive": true,
+    "createdOn": {
+        "$date": "2019-08-30T11:14:35.013+0000"
+    },
+    "modifiedOn": {
+        "$date": "2019-08-30T11:14:35.013+0000"
+    },
+    "entityData": {
+        "message": "I'll be 30 minutes late due to truck breakdown"
+    },
+    "createdBy": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "assignedTo": {
+        "id": "5d68d402eb99440ef655b80c",
+        "name": "Pilot Driver"
+    },
+    "__v": 0
+}

@@ -1,0 +1,25 @@
+http:
+    requestTimeOutInMs: 200000
+
+dbConfigs:
+  protocol: mongodb
+  host: localhost
+  port: 27017
+
+security:
+  privateKey: "-----BEGIN RSA PRIVATE KEY-----\nMIICXgIBAAKBgQDAXLvSlA2SY79xGzNohCoaqajvlvmAg7wQwqxjWX+hgqD4CbZl\nxvCHFVdb3KdMBQ1gLlQKEXBbHO7PzVxdS6kATYLfZLobJttJSsm/YMAjPy5F6iOl\nonpk3bG+M6YHGC/meFrqL1YOeoleMy9piEU2TRcoyIOldR0J9m5fBvDGHQIDAQAB\nAoGBAK1jqUUhgK5ATPKlwwvlfZI09XqoylLF64HsB7kxlfK+LVwGXSuWS35nhSvf\nU8kZELpuZ///QhhOlxAmGqhZp4V07YOn53XBCLKPrkdkmxY1hhtkribCwWzuA2Ev\nNTDSogy2R3hzNxX/UyG0GcnStGc+dWVR5Y3OThTdZGUAvPfdAkEA92HFtUH/5feq\nVLK7WaQIs7hLW4PSY5r4DvdFfwdlhqOMiTntGswRQrFHPbRM2bqsTVvdtHbj/DKi\nnopht1fk2wJBAMcQR23nwmUPVxuzvIp1sqFsGk98RS5lQMEelx3JTd2MKdjIrv57\nn0xR5Qe+t4P/PUbxeAViqZPNSiieSkegtmcCQQCjUsW4+a39IhoueSH/+LBWFyKJ\ndOp+IF4NY2tahoOc9HVgVAIaYwgyQ+CI+HSUew4utKwW7Tdv1e5PRYVmCn1pAkEA\nudnOBqOhj/7xgfCeL9tRSnqGWf2ZDYcFHQi1Z97hLt5E15wOHZRHltbC8SczaS5t\nBIY/Wy/RSSgae6/Fg/hdMwJAMvdXadtzJv+sShJI88Czq2RN6s0Uq16zjq9l4jaK\nlAQrnOZUoKagntzQMv/Ko+q00hg8Qb+6Qtl8wDRz+UaDTw==\n-----END RSA PRIVATE KEY-----"
+  publicKey: "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAXLvSlA2SY79xGzNohCoaqajv\nlvmAg7wQwqxjWX+hgqD4CbZlxvCHFVdb3KdMBQ1gLlQKEXBbHO7PzVxdS6kATYLf\nZLobJttJSsm/YMAjPy5F6iOlonpk3bG+M6YHGC/meFrqL1YOeoleMy9piEU2TRco\nyIOldR0J9m5fBvDGHQIDAQAB\n-----END PUBLIC KEY-----"
+
+token:
+  tokenExpirationTime: '312h'
+
+passOnRequestHeaders: "Authorization,CorrelationId,Content-Type,Cookie"
+
+accessParams:
+  create: CREATE
+  read: READ
+  update: UDPATE
+  delete: DELETE
+
+modules:
+  audioMessage: 'AUDIO_MESSAGE'
