@@ -30,3 +30,14 @@
   - [service] - contains the mapper objects
   -  [vars] - variables declarations
 * [babe-start.sh]- neccessary commans for deployment on server
+### Architecture & Functionality
+ * **For high level ARCHITECTURE DIAGRAM refer** **[Link](https://www.lucidchart.com/documents/view/130204e7-8c54-4aca-8527-aaffc2eb1384/0_0?raw=true)**
+  ![](https://www.lucidchart.com/publicSegments/view/cbd0e62c-6b1c-482e-8f39-24ba62cacfe1/image.png)
+* **_PILOT_** **_USER_**:
+    - first we'll create the pilot user with PILOT role that consists of CREATE and READ permission module of AUDIO MESSAGE.
+    - Then pilot user will login and then create the message and he'll be able to create the message due to CREATE permission of AUDIO MESSAGE module.
+    - Message was created and dumped into the database with assignedTo field which is pilot driver id and name.
+* **_CUSTOMER_** **_USER_**: 
+    - first we'll create the customer user with CUSTOMER role that consists of READ permission only for module of AUDIO MESSAGE.
+    - Then customer user will login with JWT and then on order we have driver assigned so we'll have the id or name and then lookup the message with read permission from message service. He/she can fetch message as many times as they can.
+    - Customer will not be able to create the message because it doesnot have CREATE permission for AUDIO MESSSAGE module.
